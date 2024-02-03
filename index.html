@@ -1,70 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              heading: "Poppins, ui-serif", // Adds a new `font-display` class
+              body: "Open Sans",
+            },
+            colors: {
+              "hot-pink": "hsl(322, 100%, 66%)",
+              "pale-cyan": "hsl(193, 100%, 96%)",
+              "dark-cyan": "hsl(192, 100%, 9%)",
+              "grayish-blue": "hsl(208, 11%, 55%)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Tailwind Website Assignment</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  </style> -->
+  </head>
 
-  Try It Free
+  <body class="bg-gray-50">
+    <div class="bg-blue-50 relative">
+      <img
+        class="block lg:hidden"
+        src="./images/bg-hero-mobile.svg"
+        width="100%"
+        height="auto"
+      />
+      <img
+        class="hidden lg:block"
+        src="./images/bg-hero-desktop.svg"
+        width="100%"
+        height="auto"
+      />
+    </div>
+    <nav
+      class="flex flex-row absolute top-0 left-0 px-4 py-6 lg:px-20 lg:py-10 w-full justify-between items-center"
+    >
+      <img class="h-4 lg:h-8" src="./images/logo.svg" />
+      <button
+        class="bg-white shadow-lg shadow-black/10 rounded-full py-1 px-4 lg:py-3 lg:px-14 font-body text-xs lg:text-base font-bold"
+      >
+        Try It Free
+      </button>
+    </nav>
+    <div
+      class="flex absolute flex-col lg:flex-row justify-between items-center top-0 left-0 py-28 px-12 lg:py-36 lg:px-20 gap-y-14"
+    >
+      <div class="flex flex-col w-full gap-y-8">
+        <h3
+          class="font-heading text-2xl text-center lg:text-left lg:text-4xl w-full md:w-full lg:w-[400px] leading-[1.4] lg:leading-[1.4]"
+        >
+          Build The Community Your Fans Will Love
+        </h3>
+        <p
+          class="font-body text-sm lg:text-base text-center lg:text-left lg:w-[400px]"
+        >
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussion.
+        </p>
+        <button
+          class="bg-hot-pink shadow-lg shadow-black/10 rounded-full self-center lg:self-start text-xs lg:text-md py-3 px-12 lg:py-4 lg:px-16 font-body font-bold text-white"
+        >
+          Get Started For Free
+        </button>
+      </div>
+      <img class="w-full lg:w-1/2" src="images/illustration-mockups.svg" />
+    </div>
 
-  Build The Community Your Fans Will Love
+    <div
+      class="flex flex-col px-4 py-6 lg:px-20 lg:py-8 lg:items-center justify-between bg-gray-50"
+    >
+      <div
+        class="flex flex-col shadow-lg my-8 gap-y-8 md:flex-row-reverse items-center justify-between bg-white rounded-2xl p-8 lg:pl-24 w-full lg:h-[400px] gap-x-8"
+      >
+        <img
+          class="w-auto lg:h-full"
+          src="/images/illustration-grow-together.svg"
+        />
+        <div class="flex flex-col justify-center gap-y-8">
+          <h3
+            class="font-heading text-2xl text-center lg:text-left lg:text-3xl w-full md:w-full lg:w-[400px] leading-[1.4] lg:leading-[1.4]"
+          >
+            Grow Together
+          </h3>
+          <p
+            class="font-body text-sm lg:text-md text-center lg:text-left lg:w-[400px] text-gray-400"
+          >
+            Generate meaningful discussions with your audience and build a
+            strong, loyal community. Think of the insightful conversations you
+            miss out on with a feedback form.
+          </p>
+        </div>
+      </div>
 
-  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-  Create connections with your users as you engage in genuine discussion. 
+      <div
+        class="flex flex-col shadow-lg gap-y-8 md:flex-row items-center justify-between bg-white rounded-2xl p-8 lg:pl-24 w-full lg:h-[400px] gap-x-8"
+      >
+        <img
+          class="w-auto lg:h-full"
+          src="/images/illustration-flowing-conversation.svg"
+        />
+        <div class="flex flex-col justify-center gap-y-8">
+          <h3
+            class="font-heading text-2xl text-center lg:text-left lg:text-3xl w-full md:w-full lg:w-[400px] leading-[1.4] lg:leading-[1.4]"
+          >
+            Flowing Conversations
+          </h3>
+          <p
+            class="font-body text-sm lg:text-md text-center lg:text-left lg:w-[400px] text-gray-400"
+          >
+            You wouldn't paginate a conversation in real life, so why do it
+            online? Our threads have just-in-time loading for a more natural
+            flow.
+          </p>
+        </div>
+      </div>
 
-  Get Started For Free
+      <div
+        class="flex flex-col shadow-lg my-8 gap-y-8 md:flex-row-reverse items-center justify-between bg-white rounded-2xl p-8 lg:pl-24 w-full lg:h-[400px] gap-x-8"
+      >
+        <img
+          class="w-auto lg:h-full"
+          src="/images/illustration-your-users.svg"
+        />
+        <div class="flex flex-col justify-center gap-y-8">
+          <h3
+            class="font-heading text-2xl text-center lg:text-left lg:text-3xl w-full md:w-full lg:w-[400px] leading-[1.4] lg:leading-[1.4]"
+          >
+            Your Users
+          </h3>
+          <p
+            class="font-body text-sm lg:text-md text-center lg:text-left lg:w-[400px] text-gray-400"
+          >
+            It takes no time at all to integrate Huddle with your app's
+            authentication solution. This means, once signed in to your app,
+            your users can start chatting immediately.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  Grow Together
+    <footer class="py-12 w-full bg-dark-cyan mt-16 px-4">
+      <div class="flex justify-center -translate-y-24">
+        <div
+          class="flex flex-col bg-white shadow-md rounded-2xl px-8 py-8 lg:px-24 lg:py-12 gap-y-4 lg:gap-y-8"
+        >
+          <p
+            class="font-heading text-md text-center lg:text-left lg:text-2xl w-full lg:w-full leading-[1.4] lg:leading-[1.4]"
+          >
+            Ready To Build Your Community?
+          </p>
+          <button
+            class="self-center shadow-lg shadow-black/10 bg-hot-pink rounded-full py-3 px-8 lg:py-3 lg:px-20 text-xs lg:text-sm font-body text-white"
+          >
+            Get Started For Free
+          </button>
+        </div>
+      </div>
 
-  Generate meaningful discussions with your audience and build a strong, loyal community. 
-  Think of the insightful conversations you miss out on with a feedback form. 
+      <div
+        class="flex flex-col lg:flex-row justify-between text-white gap-y-6 font-body text-sm font-light"
+      >
+        <div class="flex flex-col lg:flex-row p-4 lg:p-16 gap-x-12">
+          <div class="flex flex-col gap-y-6 lg:max-w-[33%]">
+            <img class="w-44" src="./images/logo copy.svg" />
+            <div class="flex flex-col gap-y-4">
+              <div class="flex items-start gap-x-6">
+                <img class="m-1 h-6" src="images/icon-location.svg" />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
+              </div>
+              <div class="flex items-start gap-x-6">
+                <img class="m-1" src="images/icon-phone.svg" />
+                +1-543-123-4567
+              </div>
+              <div class="flex items-start gap-x-6">
+                <img class="m-1" src="images/icon-email.svg" />
+                example@huddle.com
+              </div>
+            </div>
+          </div>
 
-  Flowing Conversations
+          <ul class="flex lg:flex-1 mt-8 text-lg lg:w-full flex-col gap-y-4">
+            <li>About Us</li>
+            <li>What We Do</li>
+            <li>FAQ</li>
+          </ul>
+          <ul class="flex lg:flex-1 mt-8 text-lg lg:w-full flex-col gap-y-4">
+            <li>Career</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+          </ul>
 
-  You wouldn't paginate a conversation in real life, so why do it online? Our threads 
-  have just-in-time loading for a more natural flow.
-
-  Your Users
-
-  It takes no time at all to integrate Huddle with your app's authentication solution. 
-  This means, once signed in to your app, your users can start chatting immediately.
-
-  Ready To Build Your Community?
-
-  Get Started For Free
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-  incididunt ut labore et dolore magna aliqua
-
-  +1-543-123-4567
-  example@huddle.com
-
-  About Us
-  What We Do
-  FAQ
-
-  Career
-  Blog
-  Contact Us
-
-  &copy; Copyright 2018 Huddle. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+          <div
+            class="flex flex-col items-center text-center gap-y-6 lg:gap-y-56"
+          >
+            <div
+              class="flex items-center flex-row justify-center mt-8 lg:mt-0 w-full gap-x-4 gap-y-2"
+            >
+              <div
+                class="flex items-center justify-center p-2 w-8 border-white border rounded-full"
+              >
+                <img class="w-8" src="/images/facebook.svg" />
+              </div>
+              <div
+                class="flex items-center justify-center p-2 w-8 border-white border rounded-full"
+              >
+                <img class="w-8" src="/images/twitter.svg" />
+              </div>
+              <div
+                class="flex items-center justify-center p-2 w-8 border-white border rounded-full"
+              >
+                <img class="w-8" src="/images/instagram.svg" />
+              </div>
+            </div>
+            <div>&copy; Copyright 2018 Huddle. All rights reserved.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
+
+<!-- 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Pink: hsl(322, 100%, 66%)
+
+### Neutral
+
+- Very Pale Cyan: hsl(193, 100%, 96%)
+- Very Dark Cyan: hsl(192, 100%, 9%)
+- Grayish Blue: hsl(208, 11%, 55%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 600
+
+### Body, Call-to-actions
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400, 700
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/) -->
