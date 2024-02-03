@@ -55,7 +55,17 @@
   </head>
 
   <body class="bg-gray-50">
-    <div class="bg-blue-50 relative">
+    <nav
+      class="flex flex-row absolute top-0 left-0 px-4 py-6 lg:px-20 lg:py-10 w-full justify-between items-center z-20"
+    >
+      <img class="h-4 lg:h-8" src="./images/logo.svg" />
+      <button
+        class="bg-white hover:cursor-pointer hover:text-gray-400 shadow-lg shadow-black/10 rounded-full py-1 px-4 lg:py-3 lg:px-14 font-body text-xs lg:text-base font-bold"
+      >
+        Try It Free
+      </button>
+    </nav>
+    <div class="bg-pale-cyan relative">
       <img
         class="block lg:hidden"
         src="./images/bg-hero-mobile.svg"
@@ -69,16 +79,7 @@
         height="auto"
       />
     </div>
-    <nav
-      class="flex flex-row absolute top-0 left-0 px-4 py-6 lg:px-20 lg:py-10 w-full justify-between items-center"
-    >
-      <img class="h-4 lg:h-8" src="./images/logo.svg" />
-      <button
-        class="bg-white shadow-lg shadow-black/10 rounded-full py-1 px-4 lg:py-3 lg:px-14 font-body text-xs lg:text-base font-bold"
-      >
-        Try It Free
-      </button>
-    </nav>
+
     <div
       class="flex absolute flex-col lg:flex-row justify-between items-center top-0 left-0 py-28 px-12 lg:py-36 lg:px-20 gap-y-14"
     >
@@ -96,7 +97,7 @@
           engage in genuine discussion.
         </p>
         <button
-          class="bg-hot-pink shadow-lg shadow-black/10 rounded-full self-center lg:self-start text-xs lg:text-md py-3 px-12 lg:py-4 lg:px-16 font-body font-bold text-white"
+          class="bg-hot-pink hover:bg-pink-300 shadow-lg shadow-black/10 rounded-full self-center lg:self-start text-xs lg:text-md py-3 px-12 lg:py-4 lg:px-16 font-body font-bold text-white"
         >
           Get Started For Free
         </button>
@@ -188,7 +189,7 @@
             Ready To Build Your Community?
           </p>
           <button
-            class="self-center shadow-lg shadow-black/10 bg-hot-pink rounded-full py-3 px-8 lg:py-3 lg:px-20 text-xs lg:text-sm font-body text-white"
+            class="self-center shadow-lg shadow-black/10 bg-hot-pink hover:bg-pink-300 rounded-full py-3 px-8 lg:py-3 lg:px-20 text-xs lg:text-sm font-body text-white"
           >
             Get Started For Free
           </button>
